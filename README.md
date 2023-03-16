@@ -1,6 +1,6 @@
-# System Golf (UI)
+# System Juliet UI
 
-This application serves the UI as a part of the overall https://github.com/jvalentino/sys-golf project. For system details, please see that location
+This application serves the UI as a part of the overall https://github.com/jvalentino/sys-juliet project. For system details, please see that location
 
 Prerequisites
 
@@ -59,7 +59,7 @@ This script consists of the following:
 ```bash
 #!/bin/bash
 
-NAME=sys-golf-ui
+NAME=sys-juliet-ui
 VERSION=latest
 HELM_NAME=frontend
 
@@ -143,7 +143,7 @@ By default this variant of nginx redirects access and error logs to standard out
     Match *
     Host elasticsearch-master
     Port 9200
-    Index frontend
+    Index sys-ui
     Suppress_Type_Name On
 ```
 

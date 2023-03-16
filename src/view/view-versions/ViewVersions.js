@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import * as controller from "./view-versions-controller";
 import AppState from "../../AppState";
 import Menu from "../../component/menu/Menu";
+import * as dateUtil from "../../util/date-util";
 
 class ViewVersions extends Component {
   constructor() {
@@ -123,10 +124,7 @@ class ViewVersions extends Component {
             {doc.versions.map((version) => (
               <tr key={version.docVersionId}>
                 <td>{version.versionNum}</td>
-                <td>
-                  {new Date(version.createdDateTime).toLocaleDateString()}{" "}
-                  {new Date(version.createdDateTime).toLocaleTimeString()}
-                </td>
+                <td>{dateUtil.formatDate(version.createdDateTime)}</td>
                 <td>
                   <button
                     name={version.docVersionId}

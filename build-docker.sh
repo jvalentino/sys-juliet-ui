@@ -1,8 +1,8 @@
 #!/bin/bash
 
-NAME=sys-golf-ui
+NAME=sys-juliet-ui
 VERSION=latest
-HELM_NAME=frontend
+HELM_NAME=sys-ui
 
 helm delete $HELM_NAME || true
 minikube image rm $NAME:$VERSION

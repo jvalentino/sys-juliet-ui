@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import * as controller from "./dashboard-controller";
 import AppState from "../../AppState";
 import Menu from "../../component/menu/Menu";
+import * as dateUtil from "../../util/date-util";
 
 class Dashboard extends Component {
   constructor() {
@@ -51,7 +52,7 @@ class Dashboard extends Component {
               <tr key={document.docId}>
                 <td>{document.name}</td>
                 <td>{document.updatedByUser.email}</td>
-                <td>{document.updatedDateTime.year}</td>
+                <td>{dateUtil.formatDate(document.updatedDateTime)}</td>
                 <td>
                   <a href={`./view-versions/${document.docId}`}>
                     View Versions
